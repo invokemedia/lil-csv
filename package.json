@@ -1,0 +1,11 @@
+{
+  "name": "lil-csv",
+  "version": "1.0.0",
+  "description": "a tiny function that turns simple objects into a CSV",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "James Doyle",
+  "license": "MIT"
+}
