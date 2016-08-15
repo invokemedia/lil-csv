@@ -15,6 +15,10 @@ let data = [{
 
 assert.equal('name,job\n"James","dev"\n"Addison","dev"\n"Andrew","dev"', csv(data, ['name', 'job']), "Failed to compare CSV output");
 
+csv(data, ['name', 'job'], function (output) {
+  assert.equal('name,job\n"James","dev"\n"Addison","dev"\n"Andrew","dev"', output, "Failed to compare CSV output using a callback");
+});
+
 let data2 = [{
   name: 'James',
   job: 'dev',

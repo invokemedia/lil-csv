@@ -1,4 +1,7 @@
-function parse(data, headers) {
+function parse(data, headers, callback) {
+  if (typeof(data) === 'undefined') {
+    throw new Error('The first argument is required. You need to supply an array of objects for the CSV output.');
+  }
   if (typeof(headers) === 'undefined') {
     throw new Error('The second argument is required. You need to supply headers for the CSV output.');
   }
@@ -23,6 +26,10 @@ function parse(data, headers) {
 
   // dump 'er
   let output = headers + "\n" + rows.join("\n");
+
+  if (callback && typeof(callback) === 'function') {
+    callback(output);
+  }
 
   return output;
 }
