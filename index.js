@@ -2,9 +2,11 @@ function parse(data, headers, callback) {
   if (typeof(data) === 'undefined') {
     throw new Error('The first argument is required. You need to supply an array of objects for the CSV output.');
   }
+
   if (typeof(headers) === 'undefined') {
     throw new Error('The second argument is required. You need to supply headers for the CSV output.');
   }
+
   let rows = [];
   let len = data.length;
   for (let i = 0; i < len; i++) {
