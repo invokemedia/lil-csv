@@ -22,4 +22,11 @@ csv(data, ['name', 'job']);
 
 // output:
 // name,job\n"James","dev"\n"Addison","dev"\n"Andrew","dev"
+
+// or with a callback
+csv(data, ['name', 'job'], function(output){
+    // output:
+    // name,job\n"James","dev"\n"Addison","dev"\n"Andrew","dev"
+});
+
 ```
